@@ -114,9 +114,9 @@ export function DistrictSheet({ location, record, status, onSave, onClose }: Dis
                   <label className="mt-5 block text-sm font-semibold text-[#36463a]" htmlFor={`note-${location.id}`}>{copy.noteLabel} <span className="font-normal text-[#879188]">{copy.optional}</span></label>
                   <textarea id={`note-${location.id}`} className="mt-2 min-h-20 w-full resize-y rounded-lg border border-[#d7ded5] bg-white px-3 py-2.5 text-sm outline-none placeholder:text-[#9ca69e] focus:border-[#52825d] focus:ring-3 focus:ring-[#52825d]/20" maxLength={280} placeholder={copy.notePlaceholder} value={note} onChange={(event) => setNote(event.target.value)} />
 
-                  <div className="mt-5 flex items-center justify-between gap-3 border-t border-[#e5eae3] pt-4">
+                  <div className="mt-5 flex items-center justify-between gap-3 pt-4">
                     <p aria-live="polite" className="min-h-5 text-xs text-[#69756b]">{statusMessages[draftStatus] ?? ''}</p>
-                    <Button className="h-11 shrink-0 cursor-pointer px-5" disabled={!canSave} type="submit">{copy.saveRecord}</Button>
+                    <Button className="h-11 shrink-0 cursor-pointer px-5 bg-[#263d2e] hover:bg-[#365640] text-white" disabled={!canSave} type="submit">{copy.saveRecord}</Button>
                   </div>
                 </form>
               </>

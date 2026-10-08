@@ -85,7 +85,7 @@ function NoteDialog({ record, locationName, copy }: NoteDialogProps) {
                   onChange={(event) => setDraft(event.target.value)}
                 />
                 <div className="mt-4 flex justify-end gap-2">
-                  <Button className="h-10 cursor-pointer px-5" onClick={save} type="button">{copy.saveRecord}</Button>
+                  <Button className="cursor-pointer p-5 bg-[#263d2e] hover:bg-[#365640] text-white" onClick={save} type="button">{copy.saveRecord}</Button>
                 </div>
               </>
             )}
@@ -133,7 +133,7 @@ export function TourHistory({ records, locationName }: TourHistoryProps) {
                   <th className="px-4 py-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#758076]">{copy.historyColPlace}</th>
                   <th className="hidden px-4 py-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#758076] md:table-cell">{copy.historyColReason}</th>
                   <th className="px-4 py-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#758076]">{copy.historyColNote}</th>
-                  <th className="hidden px-4 py-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#758076] sm:table-cell">{copy.historyColDate}</th>
+                  <th className="px-4 py-3 text-[10px] font-bold uppercase tracking-[0.12em] text-[#758076]">{copy.historyColDate}</th>
                   <th className="w-12 px-4 py-3" />
                 </tr>
               </thead>
@@ -160,7 +160,7 @@ export function TourHistory({ records, locationName }: TourHistoryProps) {
                       <td className="px-4 py-3">
                         <NoteDialog copy={copy} locationName={locationName} record={record} />
                       </td>
-                      <td className="hidden whitespace-nowrap px-4 py-3 sm:table-cell">
+                      <td className="whitespace-nowrap px-4 py-3">
                         <p className="flex items-center gap-1.5 text-[11px] text-[#879188]">
                           <CalendarDays aria-hidden="true" className="size-3.5 shrink-0" />
                           {dateFormat.format(new Date(record.createdAt))}
@@ -175,8 +175,8 @@ export function TourHistory({ records, locationName }: TourHistoryProps) {
           </div>
 
           {hasMore && (
-            <div className="mt-4 text-center">
-              <Button className="h-10 cursor-pointer gap-1.5 px-5" onClick={() => setShowAll((value) => !value)} variant="ghost">
+            <div className="mt-4 text-center flex justify-end">
+              <Button className="h-10 cursor-pointer gap-1.5 p-5 bg-[#263d2e] hover:bg-[#365640] text-white" onClick={() => setShowAll((value) => !value)} variant="ghost">
                 {showAll ? copy.showLess : copy.allRecords}
                 {showAll ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
               </Button>

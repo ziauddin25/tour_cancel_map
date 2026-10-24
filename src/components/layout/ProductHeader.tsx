@@ -38,7 +38,7 @@ export function ProductHeader() {
             )
           })}
         </nav>
-        <div aria-label="Language" className="rounded-full border border-[#dce4d9] bg-white py-2 px-3" role="group">
+        <div aria-label="Language" className="rounded-full border border-[#dce4d9] bg-white py-2 px-3 hover:bg-[#eef2ec] hover:text-[#263d2e]" role="group">
           <button
             type="button"
             className='flex gap-1 items-center cursor-pointer'

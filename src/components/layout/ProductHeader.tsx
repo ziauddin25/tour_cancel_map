@@ -32,7 +32,7 @@ export function ProductHeader() {
           {navigation.map((item) => {
             const active = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
             return (
-              <Link key={item.href} aria-current={active ? 'page' : undefined} className={`whitespace-nowrap rounded-full px-1.5 py-2.5 text-[10px] font-semibold transition-colors sm:px-4 sm:text-sm ${active ? 'bg-[#e7eee5] text-[#284332]' : 'text-[#6c786e] hover:bg-[#eef2ec] hover:text-[#263d2e]'}`} href={item.href}>
+              <Link key={item.href} aria-current={active ? 'page' : undefined} className={`whitespace-nowrap rounded-full px-1.5 py-2.5 text-[12px] font-semibold transition-colors sm:px-4 sm:text-sm ${active ? 'bg-[#e7eee5] text-[#284332]' : 'text-[#6c786e] hover:bg-[#eef2ec] hover:text-[#263d2e]'}`} href={item.href}>
                 {item.label}
               </Link>
             )

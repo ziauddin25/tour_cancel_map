@@ -57,7 +57,7 @@ export function TourStatusSummary({ statuses, total }: TourStatusSummaryProps) {
       <div className="flex items-center gap-3">
         <span aria-hidden="true" className="text-[30px] leading-none">📊</span>
         <div className="min-w-0">
-          <p className="text-[13px] font-medium text-[#8a7570]">{copy.mapCoverage(marked)}</p>
+          <p className="text-[13px] font-medium text-[#8a7570]">{copy.mapCoverage(marked, total > 64 ? 'country' : 'district')}</p>
           <p className="text-lg font-extrabold leading-tight text-[#b14b43]">{copy.statusSummaryTitle}</p>
         </div>
         <span className="ml-auto shrink-0 whitespace-nowrap rounded-full border border-[#f1d4d0] bg-white px-3 py-1 text-[13px] font-bold tabular-nums text-[#b14b43]">{marked} / {total}</span>
